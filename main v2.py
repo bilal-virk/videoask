@@ -26,6 +26,9 @@ password = config.get('auth', 'password')
 button_text = config.get('auth', 'button_text')
 button_url = config.get('auth', 'button_url')
 leads_file = config.get('auth', 'contacts_file')
+if '.csv' not in leads_file:
+    leads_file += '.csv'
+print(f"Using contacts file: {leads_file}")
 skip_if_message_exist = config.get('auth', 'skip_if_message_exists').lower()
 title = config.get('auth', 'title')
 speed = config.get('auth', 'speed').lower()
